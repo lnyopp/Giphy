@@ -1,39 +1,28 @@
-var movieArray =["Harry Potter","Lord of the Rings","Stargate","Top Gun","Independence Day"];
+var topics =["Harry Potter","Lord of the Rings","Stargate","Top Gun","Independence Day"];
 
 $(document).ready(function(){
 
 function populateButtons(){
 
-    for (var i = 0; i < moviesArray.length; i++) {
-        var movieButton = $("<button>").text(movieArray[i]);
-        
-        movieButton.addClass("movieTitle");
-        $(".movies").append(movieButton);
+    for (var i = 0; i < topics.length; i++) {
+        var movieButton = $("<button>").addClass("button").text(topics[i]);
 
-        // // Creating and storing a div tag
-        // var  = $("<div>");
-
-        // // Creating a paragraph tag with the result item's rating
-        // var p = $("<p>").text("Rating: " + results[i].rating);
-
-        // // Creating and storing an image tag
-        // var animalImage = $("<img>");
-        // // Setting the src attribute of the image to a property pulled off the result item
-        // animalImage.attr("src", results[i].images.fixed_height.url);
-
-        // // Appending the paragraph and image tag to the animalDiv
-        // animalDiv.append(p);
-        // animalDiv.append(animalImage);
-
-        // // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-        // $("#gifs-appear-here").prepend(animalDiv);
-      
+        $(".movies").append(movieButton);    
    
     }}
 $(".movies").before(function(){
 
     populateButtons();
 
-});
+})
+
 });
 
+
+// $(".btn btn-primary").click(function(){
+
+//     var movieTitle = document.getElementById("InputMovie").val().trim();
+
+//     fuction (movieTitleAdd)()
+//         movieTitle.push(topics);
+// });
